@@ -1,14 +1,15 @@
 use anchor_lang::prelude::*;
 use anchor_spl::{
     associated_token::AssociatedToken,
-    token::{self, Mint, Token, TokenAccount, MintTo, Transfer},
+    token::{Mint, Token, TokenAccount},
 };
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("2ABtyKKMJA13gzVWUxMhT3EeuzZWm2KCGKUAx7jghUtA");
 
 #[program]
 pub mod my_solana_project {
     use super::*;
+    use anchor_spl::token::{self, MintTo, Transfer};
 
     pub fn initialize(_ctx: Context<Initialize>) -> Result<()> {
         msg!("Music NFT Platform initialized!");
